@@ -1,0 +1,644 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  height: 100vh;
+}
+
+@font-face {
+  font-family: "Pokemon";
+  src: url(/fonts/Pokemon\ Hollow.ttf);
+  font-weight: bold;
+  font-style: bold;
+}
+
+/* Header */
+
+header {
+  padding-top: 0%;
+}
+
+
+/* Menu Navegacion */
+
+.nav {
+  background: #3b0303;
+  height: 70%;
+  color: #ffffff;
+  padding: 0px 40px;
+}
+
+.nav__container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.nav__menu {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3em;
+}
+
+.nav__item {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 20px;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0 100%);
+
+}
+
+.nav__item::after {
+  content: "";
+  display: block;
+  background: #ffffff;
+  width: 90%;
+  height: 3px;
+  margin-top: 3px;
+  clip-path: var(--clippy);
+  transition: clip-path .4s;
+}
+
+.nav__item:hover {
+  --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+}
+
+.nav__label,
+.nav__input {
+  display: none;
+}
+
+/* main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.pokemon {
+  background-image: url(../img/pikachuchiquito.png);
+  background-size: cover;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  width: 300px;
+  height: 300px;
+}
+
+.onepiece {
+  background-image: url(../img/luffychiquito.png);
+  background-size: cover;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  width: 300px;
+  height: 300px;
+  display: flex;
+}
+
+/*Imagenes Carrousel  */
+
+.carrusel {
+  position: relative;
+  width: 999px;
+  height: 412px;
+  overflow: hidden;
+}
+
+.carrusel-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  animation: carousel-animation 10s infinite;
+}
+
+.carrusel-item {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos de los ítems del carrusel */
+.slide1 {
+  background-color: #ffffff;
+}
+
+.slide2 {
+  background-color: #ffffff;
+}
+
+.slide3 {
+  background-color: #ffffff;
+}
+
+
+/* Animación del carrusel */
+@keyframes carousel-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  30% {
+    transform: translateX(-100%);
+  }
+
+  60% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Venta Index */
+.contenedor___venta {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-left: 50px;
+  width: 80%;
+}
+
+.centrar___contenedores {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 100%;
+  gap: 10%;
+  padding: 0px 30px;
+}
+
+.contenedor___producto---venta {
+  width: 200px;
+  height: 300px;
+  border: 1px solid goldenrod;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: 0.5s;
+  margin-bottom: 20px;
+}
+
+.contenedor___producto---venta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 10px 5px rgba(155, 60, 8, 0.5);
+}
+
+.contenedor___img---venta___producto {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor___img---venta___producto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  display: flex;
+}
+
+.contenedor___descripcion {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contenedor___paginas {
+  height: 30px;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: .5s;
+}
+
+.contenedor___paginas a {
+  text-decoration: none;
+  color: black;
+  width: 20px;
+  text-align: center;
+  display: flex;
+}
+
+.contenedor___paginas a:hover {
+  color: rgb(102, 83, 121);
+}
+
+
+/* Footer */
+
+.contenedorTotalFooter {
+  background-color: #3b0303;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  height: 150px;
+}
+
+.contenedor___informacion---footer {
+  width: 25%;
+  height: 60%;
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(29, 1, 1);
+  border-radius: 8px;
+}
+
+.contenedorTituloEnlaces {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.enlacesFooter {
+  width: 100%;
+  padding: 20px 0px;
+  height: 40%;
+  justify-content: space-around;
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+}
+
+.redesFooter {
+  text-align: center;
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  height: 40%;
+  padding: 20px 0px;
+}
+
+.contenedorRedesResponsive {
+  display: none;
+}
+
+.contenedorTotalFooter a {
+  text-decoration: none;
+  color: white;
+  transition: .5s;
+}
+
+.contenedorTotalFooter a:hover {
+  color: rgb(228, 223, 223);
+}
+
+.contactoFooter {
+  text-align: right;
+  list-style: none;
+  margin-right: 15px;
+}
+
+/* Venta Pokemon.html */
+.contedorVenta3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.cont3 {
+  display: inline-block;
+  text-align: center;
+  margin: 0 40px;
+}
+
+.imgPokemon3 {
+  max-width: 500px;
+  display: inline-block;
+  height: auto;
+}
+
+.contedorVenta4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  margin-left: 50px;
+}
+
+.cont4 {
+  display: inline-block;
+  text-align: center;
+  margin: 30px 70px;
+}
+
+.imgPokemon4 {
+  width: 300px;
+  display: inline-block;
+  height: auto;
+}
+
+h1 {
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Courier, monospace;
+  color: #ecc85e;
+  font-size: 50px;
+}
+
+.siguiPkm {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Historia TCG */
+.comienzo {
+  text-align: center;
+  margin: 30px 50px 30px 50px;
+  border-top: 3px solid #ecc85e;
+  border-left: 3px solid #ecc85e;
+  border-bottom: 3px solid #ecc85e;
+  border-right: 3px solid #ecc85e;
+}
+
+.actualidad {
+  text-align: center;
+  margin: 30px 50px 30px 50px;
+  border-top: 3px solid #ecc85e;
+  border-left: 3px solid #ecc85e;
+  border-bottom: 3px solid #ecc85e;
+  border-right: 3px solid #ecc85e;
+}
+
+.tituloHist {
+  font-family: "Courier New", Courier, monospace;
+  color: #ecc85e;
+  font-size: 25px;
+  text-align: center;
+}
+
+.videoTcg {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.imagenTcg {
+  width: 360px;
+  height: auto;
+}
+
+/* Conoce TCG */
+
+.queEsUnTcg {
+  text-align: center;
+  margin: 30px 50px 30px 50px;
+  border-top: 3px solid #ecc85e;
+  border-left: 3px solid #ecc85e;
+  border-bottom: 3px solid #ecc85e;
+  border-right: 3px solid #ecc85e;
+}
+
+.mecanicas {
+  text-align: center;
+  margin: 30px 50px 30px 50px;
+  border-top: 3px solid #ecc85e;
+  border-left: 3px solid #ecc85e;
+  border-bottom: 3px solid #ecc85e;
+  border-right: 3px solid #ecc85e;
+}
+
+.tiposC {
+  text-align: center;
+  margin: 30px 50px 30px 50px;
+  border-top: 3px solid #ecc85e;
+  border-left: 3px solid #ecc85e;
+  border-bottom: 3px solid #ecc85e;
+  border-right: 3px solid #ecc85e;
+}
+
+.contedorImgT {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  margin-left: 50px;
+}
+
+.contenedorTiposCartas {
+  display: inline-block;
+  text-align: center;
+  margin: 30px 70px;
+}
+
+.imgT {
+  width: 100px;
+  display: inline-block;
+  height: auto;
+}
+
+.imgMecanicas {
+  width: 450px;
+  height: auto;
+}
+
+.ultimoTexto {
+  text-align: center;
+  margin: 30px 50px 30px 50px;
+  border-top: 3px solid #ecc85e;
+  border-left: 3px solid #ecc85e;
+  border-bottom: 3px solid #ecc85e;
+  border-right: 3px solid #ecc85e;
+}
+
+.listaGuias {
+  list-style: none;
+}
+
+/* Formulario contacto */
+.contacto {
+  text-align: center;
+  margin: 30px 50px 30px 50px;
+  border-top: 3px solid #ecc85e;
+  border-left: 3px solid #ecc85e;
+  border-bottom: 3px solid #ecc85e;
+  border-right: 3px solid #ecc85e;
+  background-color: beige;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ecc85e;
+}
+
+input,
+textarea {
+  display: block;
+  border: 1px solid red;
+  margin: 0 auto;
+}
+
+.imgMgz {
+  text-align: center;
+  margin: 30px 50px 30px 50px;
+  border-top: 3px solid #ecc85e;
+  border-left: 3px solid #ecc85e;
+  border-bottom: 3px solid #ecc85e;
+  border-right: 3px solid #ecc85e;
+}
+
+.imgPersonal {
+  width: 240px;
+  height: auto;
+}
+
+/* Responsive */
+/* Vista Tablet */
+@media (max-width: 1480px) {
+  nav {
+    height: 200px;
+  }
+
+  .nav__container {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .redesFooter {
+    display: none;
+  }
+
+  .contenedorRedesResponsive {
+    display: flex;
+    justify-content: space-around;
+    margin: 17px 0px;
+  }
+
+  .contenedorRedesResponsive .redesFooterResponsive {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1035px) {
+
+  .nav__container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav__label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav__menu {
+    position: absolute;
+    top: 149px;
+    bottom: 0;
+    background: #630202;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path at ease-in-out;
+    z-index: 101;
+  }
+
+  .nav__input:checked+.nav__menu {
+    clip-path: circle(100% at center);
+  }
+
+  .carrusel {
+    width: 80%;
+  }
+
+  .centrar___contenedores {
+    width: auto;
+    padding: 0;
+  }
+
+  .contenedorTotalFooter {
+    flex-direction: column;
+    height: auto;
+    background-color: #3b0303;
+  }
+  
+  .contenedorTotalFooter a:hover {
+    color: rgb(228, 223, 223);
+  }
+  
+  .contenedor___informacion---footer {
+    width: 100%;
+  }
+  
+  .enlacesFooter, .redesFooter {
+    height: auto;
+  }
+  
+  .redesFooter {
+    display: none;
+  }
+  
+  .contenedorRedesResponsive {
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+}
+
+@media (max-width: 600px) {
+
+
+  #centrarCartas {
+    display: flex;
+    justify-content: center;
+  }
+
+  .carrusel {
+    display: none;
+  }
+
+  .redesFooter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .redesFooterResponsive {
+    display: none;
+  }
+  
+}
