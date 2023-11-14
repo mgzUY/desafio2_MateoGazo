@@ -565,6 +565,9 @@ textarea {
     cursor: pointer;
   }
 
+  .nav__label img {
+    width: 55px;
+  }
   .nav__menu {
     position: absolute;
     top: 149px;
@@ -646,6 +649,29 @@ gap: 10px;
 
 @media (max-width: 600px) {
 
+  .nav {
+    padding: 0 60px;
+  }
+
+.nav__container {
+  justify-content: space-between;
+}
+
+nav .nav__menu {
+  top: 95px;
+}
+  .nav__logo {
+    width: 250px;
+    overflow: hidden;
+  }
+
+.nav__logo img {
+  width: 250px;
+}
+
+.nav__label img {
+width: 45px;
+}
 
   #centrarCartas {
     display: flex;
@@ -666,3 +692,7 @@ gap: 10px;
   }
   
 }
+
+/* @media (max-width: 565px) {
+
+} */
